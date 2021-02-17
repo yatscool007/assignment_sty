@@ -1,0 +1,30 @@
+for this probleM I strictly followed the text classification approach as for the give classification task semantic analysis and textual analysis along with 
+vectorization techniques would help model understand the data better,rather than including other features too.
+
+#==================Preprocessing==========
+1.Cleaned the text,removed html tags,stopwaords,performed Porter Stemming.Though Snowball stemmig can also be performed here ,but the porter stemming works better
+2.Using regular expressions cleaned the data
+
+3.Performed splitting on the train data for getting the cross validation data
+
+
+#============Vectorization and ML models=====================
+
+1.Used Bag of words and tfidf vectorizer with ti grams,also I performed splitting to avoid data leakage of any sort
+2.Used TSNE to visualize the data distribution in higer dimension,a linear model was chosed based on dimensionality of the data.I could have chosen an ensemble non
+linear model like XGBOOST but the dimensionality was very high.
+3.Used SGDClassifier along with Calibrated Classifier to get better probability estimates while using sigmoid function.
+4.Performed the hyperparameter tuning for reducing the overfitting of data
+
+4. here TFIDF with logistic regression worked best,and I chose this finally
+
+
+
+3#=================Advanced NLP Model==============
+
+Used a transformer model,an encoder based- BERT which is pretrained.the final results can be improved by fine tuning BERT and predicting on test data .
+
+#==================Conclusion============
+Can also use a custom BERT model to train from scratch ,but that would increase the time complexity and space complexity a lot.which I believe may cause issue
+while model deployment.A linear model with tfidf tri grams works very well too.
+
